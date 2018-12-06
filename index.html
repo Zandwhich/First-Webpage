@@ -8,19 +8,19 @@
 <button id='second' onclick='secondClick()' style='visibility:hidden'></button>
 
 <script>
-var number = 0;
+    let number = 0;
 
-var firstTextFirst = "To the YEEEEEEETDOME";
-var firstTextSecond = "Click me. I dare you...";
-var secondTextFirst = "WOWOWOWWOWOWOWWOWOWOWOWOWOWOWOW SECRET BUTTON DISCOEVERED ACHIEVEMENT UNLOCKED";
-var secondTextSecond = "Numbers gotta go down down down down...";
+    const firstTextFirst = "To the YEEEEEEETDOME";
+    const firstTextSecond = "Click me. I dare you...";
+    const secondTextFirst = "WOWOWOWWOWOWOWWOWOWOWOWOWOWOWOW SECRET BUTTON DISCOEVERED ACHIEVEMENT UNLOCKED";
+    const secondTextSecond = "Numbers gotta go down down down down...";
 
-function firstClick() {
+    function firstClick() {
 	number += 6;
 	document.getElementById("number").innerHTML = number;
 
 	
-	if (document.getElementById('first').innerHTML == firstTextFirst) {
+	if (document.getElementById('first').innerHTML === firstTextFirst) {
 		document.getElementById('first').innerHTML = firstTextSecond;
 	}
 	if (number >= 100) {
@@ -30,8 +30,8 @@ function firstClick() {
 	if (number < 100) {
 		document.getElementById('second').style.visibility='hidden';
 	}
-	if (number == 0) {
-		window.alert("HIT THAT YEET!")
+	if (number === 0) {
+		window.alert("HIT THAT YEET!");
 		window.alert("HIT THAT YEEEEEEEET!");
 		window.alert("HIT THAT YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEET!");
 		window.alert("ONE MORE TIME! HIT THAT YEEEEEEEEEEEEEEEEEEEEEEEY!");
@@ -41,7 +41,7 @@ function secondClick() {
 	number -= 6;
 	document.getElementById("number").innerHTML = number;
 
-	if (document.getElementById("second").innerHTML == secondTextFirst) {
+	if (document.getElementById("second").innerHTML === secondTextFirst) {
 		document.getElementById("second").innerHTML = secondTextSecond;
 	}
 	if (number > -100) {
